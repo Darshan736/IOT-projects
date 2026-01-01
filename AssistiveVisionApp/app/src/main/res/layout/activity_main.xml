@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#121212">
+
+    <!-- Camera Frame Container -->
+    <FrameLayout
+        android:id="@+id/camera_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/status_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:contentDescription="ESP32 Camera Stream" />
+
+        <com.example.esp32cam.OverlayView
+            android:id="@+id/overlay_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:contentDescription="Settings"
+            app:tint="#FFFFFF" />
+    </FrameLayout>
+
+    <!-- Status Panel -->
+    <LinearLayout
+        android:id="@+id/status_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Disconnected"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/tv_inference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inference: 0ms"
+            android:textColor="#BBBBBB"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace" />
+            
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_ai_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Natural AI Guidance"
+            android:textColor="#00FF00"
+            android:layout_marginTop="8dp"
+            android:checked="false" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ask_ai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ask AI (Voice)"
+            android:layout_marginTop="4dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

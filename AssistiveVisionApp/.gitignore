@@ -1,0 +1,12 @@
+.idea/
+.gradle/
+build/
+local.properties
+*.iml
+*.log
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+apk/*
+!apk/app-debug.apk
