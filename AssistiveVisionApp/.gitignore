@@ -1,12 +1,47 @@
-.idea/
-.gradle/
+# Built-in
 build/
-local.properties
-*.iml
-*.log
-.DS_Store
-captures/
-.externalNativeBuild/
+.gradle/
+.idea/
+cmake-build-*/
 .cxx/
-apk/*
+
+# Gradle
+local.properties
+.gradle
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Native
+.externalNativeBuild
+.cxx/
+
+# Operating System
+.DS_Store
+Thumbs.db
+.classpath
+.project
+.settings/
+
+# Mobile
+captures/
+*.hprof
+
+# APK (Exclude all except the specific debug one we want to track for assignment purposes)
+*.apk
 !apk/app-debug.apk
