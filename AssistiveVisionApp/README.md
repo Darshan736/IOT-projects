@@ -2,19 +2,19 @@
 
 > **Note:** This is a student prototype developed for the IoT Projects curriculum. It is a proof-of-concept and not a commercial medical device.
 
-## 📖 Project Overview
+## Project Overview
 Visually impaired individuals face significant challenges in navigating unknown environments, often relying on white canes or guide dogs which have limitations in detecting chest-level or dynamic obstacles. 
 
 **Assistive Vision** is an Android-based computer vision system that serves as a "digital eye". It leverages the ESP32-CAM module and an Android smartphone to provide real-time environment understanding. By processing video feeds through a YOLO Mobile architecture, the app identifies objects (people, obstacles), estimates their distance, and provides multi-modal feedback (auditory and haptic) to ensure safe navigation.
 
-## ✨ Key Features
+##  Key Features
 *   **Real-Time Object Detection**: Utilizes TensorFlow Lite (YOLO) to identify persons and generic obstacles with low latency.
 *   **Distance Estimation**: fusing camera data with ultrasonic sensor readings to calculate precise proximity.
 *   **Auditory Feedback**: Text-to-Speech (TTS) engine announces detected objects and their relative position.
 *   **Haptic Alerts**: Progressive vibration feedback warning the user of immediate collision risks.
 *   **AI Interpretation (Experimental)**: Integration with Groq LLM to provide natural language scene descriptions.
 
-## 📥 Download & Install
+##  Download & Install
 The application is available as a pre-compiled APK for testing purposes.
 
 ### Option 1: Direct APK Download
@@ -28,7 +28,7 @@ If you have Android Platform Tools installed:
 adb install apk/app-debug.apk
 ```
 
-## 🛠️ Build from Source
+##  Build from Source
 To explore the code or contribute, follow these steps:
 
 ### Prerequisites
@@ -48,9 +48,9 @@ To explore the code or contribute, follow these steps:
     *   Allow the project to sync dependencies.
 4.  **Run**
     *   Connect your Android device via Debugging Mode.
-    *   Click the **Run** (▶) button.
+    *   Click the **Run** button.
 
-## 📁 Project Structure
+##  Project Structure
 ```text
 AssistiveVisionApp/
 ├── app/
@@ -61,7 +61,7 @@ AssistiveVisionApp/
 └── gradle/              # Wrapper files
 ```
 
-## 🤝 Acknowledgments
+##  Acknowledgments
 *   **YOLOv8**: For the efficient object detection architecture.
 *   **TensorFlow Lite**: For enabling on-device inference.
 *   **Espressif**: For the ESP32-CAM hardware platform.
